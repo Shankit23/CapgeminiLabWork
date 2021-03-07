@@ -1,0 +1,25 @@
+//Create a method which accepts an integer array and removes all the duplicates in the array. Return the resulting array in descending order
+package lab.two;
+import java.util.*;
+public class ExerciseFour {
+	void sortArray() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the length of an array");
+		int length=scanner.nextInt();
+		int array[]= new int[length];
+		System.out.println("Enter the elements of an array ");
+		for(int i=0;i<length;i++) {
+			array[i]=scanner.nextInt();}
+		scanner.close();
+	
+		for(int i:array) {
+			System.out.println(array[i]);}
+	}
+	
+	
+	public static void main(String[] args) {
+		ExerciseFour obj = new ExerciseFour();
+		obj.sortArray();
+	}
+
+}

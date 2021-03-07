@@ -1,0 +1,31 @@
+package lab.two;
+import java.util.*;
+public class ExerciseTwo {
+     private String[] sortStrings(String []arr) {
+    	 String[] temp= new String[arr.length];
+		Arrays.sort(arr);
+		if(arr.length/2==0) {
+			for(int i=0;i<arr.length/2;i++) {
+				temp[i]=arr[i].toUpperCase();
+			}
+			for(int j=(arr.length/2);j<arr.length;j++)
+				temp[j]=arr[j].toLowerCase();
+		}
+		return temp;
+	}
+public static void main(String[] args){
+	System.out.println("Enter the number of string objects");
+	Scanner scanner = new Scanner(System.in);
+	int length=scanner.nextInt();
+	String[] strArray = new String[length];
+	for(int i=0;i<length;i++) {
+		strArray[i]=scanner.next();}
+	    scanner.close();
+		ExerciseTwo obj= new ExerciseTwo();
+		String showArray[]=obj.sortStrings(strArray);
+		for(int x=0;x<showArray.length;x++) {
+			System.out.println(showArray[x]);
+		}
+	}
+}
+

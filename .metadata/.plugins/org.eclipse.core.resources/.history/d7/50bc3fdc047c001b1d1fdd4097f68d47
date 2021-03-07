@@ -1,0 +1,18 @@
+package Lab1;
+
+public class Exercise6 {
+	static boolean checkNumber(int n) {
+		while(n>1) {
+			if(n%2!=0) {
+				return false;
+			}
+			return true;
+		}
+	}
+     
+	public static void main(String[] args) {
+		System.out.print("Result: "+checkNumber(10));
+
+	}
+
+}

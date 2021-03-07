@@ -1,0 +1,38 @@
+package lab.two;
+import java.util.*;
+import java.util.Scanner;
+public class ExerciseThree {
+      public void inputMethod(){
+    		Scanner scanner = new Scanner(System.in);
+    		System.out.println("Enter the length for an array");
+    		int length=scanner.nextInt();
+    		int array[]=new int[length];
+    	    System.out.println("enter the array elements");
+    	    for(int i=0;i<length;i++){
+    	    	array[i]=scanner.nextInt();
+    	    }
+    	    scanner.close();
+    	    reverseNumberInArray(array);
+      }
+      public void reverseNumberInArray(int[] arr) {
+    	  int []temp = new int[arr.length];
+    	  for(int i=0;i<arr.length;i++) {
+    		  while(arr[i]!=0) {
+    		  int digit=arr[i]%10;
+    		  temp[i]=(temp[i]*10)+digit;
+    		  arr[i]=arr[i]/10;
+    		  }
+    	}
+    	  for(int x:temp) {
+    		  System.out.println(x);
+    	  }
+      }
+      public void getSorted(int[] arr) {
+    	  
+      }
+	public static void main(String[] args) {
+	ExerciseThree object = new ExerciseThree();
+	object.inputMethod();
+	}
+
+}

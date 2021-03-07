@@ -1,0 +1,22 @@
+package lab.two;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+	Player p1 = new Player();
+	Scanner scanner= new Scanner(System.in);
+	System.out.println("Enter the player name");
+	String name=scanner.next();
+    p1.setPlayerName(name);
+	System.out.println("Enter the country name");
+	String country=scanner.next();
+	p1.setCountryName(country);
+	System.out.println("Enter the Skills");
+	String skill= scanner.next();
+	p1.setSkill(skill);
+	scanner.close();
+	p1.getPlayerDetails();
+	}
+
+}
